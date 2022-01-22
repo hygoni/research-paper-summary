@@ -1,2 +1,9 @@
 # research-paper-summary
-Summery of papers that I read
+This is a summaries of papers that I read.
+
+# Computer Architecture
+
+## NUMA
+- [Hierarchical Cache & Bus Architecture for Shared Memory Multiprocessors]()
+
+# Memory Management
