@@ -6,7 +6,7 @@ This is just a summary; details are in the paper!
 ## What is the problem this paper solves?
 
 ![Von Neumann Architecture, wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Von_Neumann_Architecture.svg/1920px-Von_Neumann_Architecture.svg.png)  
-In the Von Neumann architecture, memory becomes a bottleneck because memory is much slower than CPU. Even in modern computers, access latency of CPU registers is faster than its main memory (DRAM) 100 times. By introducing cache memory between CPU and main memory, the memory traffic can be reduced. But this papers says a single central cache controller is not enough; It proposes hierarchical architecture in cache and memory.  
+In the Von Neumann architecture, memory becomes a bottleneck because memory is much slower than CPU. Even in modern computers, access latency of CPU registers is 100x faster than its main memory (DRAM). By introducing cache memory between CPU and main memory, the memory traffic can be reduced. But this papers says a single central cache controller is not enough; It proposes hierarchical architecture in cache and memory.  
 
 Both hierarchical cache and bus architectures reduces much of global bus traffic, allowing the computer to have more than 128 processors.
 
