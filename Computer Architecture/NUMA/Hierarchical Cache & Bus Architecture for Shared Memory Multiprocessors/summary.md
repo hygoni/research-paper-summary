@@ -25,7 +25,7 @@ note that in the paper, "higher level" caches are faster and more expensive, "lo
 
 Distributing memory and buses using hierarchical architecture greatly reduces traffic of global bus. as bus traffic is distributed to many local buses, this architecture is scalable with number of processors. Nowdays, this architecture is NUMA (Non-Uniform Memory Access) and broadly used in high performance computers.  
 
-One consideration in this architecture is memory allocation policy. [This paper is nice introduction to NUMA](https://queue.acm.org/detail.cfm?id=2513149)
+One consideration in this architecture is memory allocation algorithm and policy. [This paper is nice introduction to NUMA](https://queue.acm.org/detail.cfm?id=2513149)
 
 ## Conclusion
 
