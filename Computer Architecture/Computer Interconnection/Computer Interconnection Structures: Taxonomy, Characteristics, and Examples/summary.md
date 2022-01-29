@@ -24,6 +24,14 @@ Connection Flexibility is close concept to Modularity;
 
 ### Cost of Fault Tolerance
 
+How is the system affected by failure of a single element?  
+
+If the system is dead because failure of a single element, it has poor cost of fault tolerance.  
+
+When a system has a nice cost of fault tolerance, it is likely to have way to run the entire system without that element. It may change the way that elements in the system communicate.  
+
+For example, in start network, when the central switching element is down, the system may be re-configured to communicate in decentralized way.  
+
 ### Logical Complexity
 
 ## Criterion For Categorization
