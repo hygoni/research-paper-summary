@@ -12,7 +12,15 @@ This text is my personal summary; Details are in the paper!
 
 ### Modularity
 
+"Modularity is the ability to make incremental changes in system capability." (quoted from the paper)
+
+Is cost adding Processing Element to a system is independent of size of a system? If so, it has good modularity.  
+
+But if the cost of adding a PE increases as the size of system increases, it has poor modularity.
+
 ### Connection Flexibility
+
+Connection Flexibility is close concept to Modularity; 
 
 ### Cost of Fault Tolerance
 
@@ -41,3 +49,22 @@ Is the path Dedicated to a computer, or Shared among computers?
 For example, in a bus network, all computers in that network shares a single bus (a path that message is passed). Sharing path is cheaper than giving computers Dedicated path. But when too many computers share a single path, it's likely to become a bottleneck.  
 
 For another example, in a star network, a path is Dedicated to a computer. It isn't likely to become a bottleneck, but increased cost.  
+
+### 4. Implementation Choices
+
+Last thing to consider is implementation choices. Let's say we are building a computer interconnection network and we chose TransferStrategy=Direct and TransferControlMethod=Dedicated.  
+
+But there are many form of Direct Dedicated network. The implementation should choose how they are connected.
+
+## Computer Interconnection Structures in this taxonomy
+
+- DDL (Direct Dedicated Loop) (Direct and Dedicated)
+- DDC (Complete Interconnection) (Direct and Dedicated)
+- DSM (Multiprocessor) (Direct and Shared)
+- DSB (Global Bus) (Direct and Shared)
+- ICDS (Star) (Indirect, Centralized, Dedicated)
+- ICDL (Loop with Central Switch) (Indirect, Centralized, Dedicated)
+- ICS (Bus with Central Switch) (Indirect, Centralized, Shared)
+- IDDR (Regular Network) (Indirect, Decentralized, Dedicated)
+- IDDI (Irregular Networks) (Indirect, Decentralized, Dedicated)
+- IDS (Bus Window) (Indirect, Dedicated, Shared)
