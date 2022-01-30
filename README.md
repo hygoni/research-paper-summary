@@ -10,3 +10,7 @@ This is a summaries of papers that I read.
 - [Hierarchical Cache & Bus Architecture for Shared Memory Multiprocessors](./Computer%20Architecture/NUMA/Hierarchical%20Cache%20%26%20Bus%20Architecture%20for%20Shared%20Memory%20Multiprocessors/summary.md)
 
 # Memory Management
+
+## LRU
+- (in reading) [The LRU-K Page Replacement Algorithm For Database Disk Buffering]()
+- (in reading) [2Q: A Low Overhead High Performance Buffer Management]()
