@@ -43,4 +43,4 @@ In higher level view, NUMA is one of ways to connect computers (processors). The
 
 ### I haven't read yet but...
 
-As accessing from remote cluster slows down access to memory and increases cost to synchronize between clusters, There will be papers that introduces NUMA-aware memory allocation policies/algorithms.  
+As accessing from remote cluster slows down access to memory and requires overhead to synchronize between clusters, There will be papers that introduces NUMA-aware memory allocation policies/algorithms.  
