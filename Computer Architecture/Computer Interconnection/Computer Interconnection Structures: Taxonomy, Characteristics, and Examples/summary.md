@@ -1,5 +1,7 @@
 ##  Computer Interconnection Structures: Taxonomy, Characteristics, and Examples
 
+This is summary of [Computer Interconnection Structures: Taxonomy, Characteristics, and Examples](https://dl.acm.org/doi/10.1145/356654.356658).
+
 As a undergraduate student, this paper was so interesting to me. There are many ways to connect computers in the world, and this paper tries to categorize them.  
 
 ## My personal notes
