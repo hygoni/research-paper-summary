@@ -2,11 +2,11 @@
 
 This is summary of [Computer Interconnection Structures: Taxonomy, Characteristics, and Examples](https://dl.acm.org/doi/10.1145/356654.356658).
 
-As a undergraduate student, this paper was so interesting to me. There are many ways to connect computers in the world, and this paper tries to categorize them.  
+There are many ways to connect computers in the world; This paper tries to categorize them.  
 
 ## My personal notes
 
-From personal experiences I thought computer network and multiprocessing are very different thing. But they were not. In "connecting computers" point of view, SMP (Shared Memory Processsors) and computers in my home network are not that different things. They are just a different way to connect computers. (Both are described in this taxonomy.)  
+As a undergraduate student, this paper was so interesting to me. From personal experiences I thought computer network and multiprocessing are very different thing. But they were not. In "connecting computers" point of view, SMP (Shared Memory Processsors) and computers in my home network are not that different things. They are just a different way to connect computers. (Both are described in this taxonomy.)  
 
 This text is my personal summary; Details are in the paper!  
 
