@@ -1,7 +1,8 @@
 ## Hierarchical Cache & Bus Architecture for Shared Memory Multiprocessors
 
-This is summary of [Hierarchical Cache & Bus Architecture for Shared Memory Multiprocessors", Andrew W. Wilson Jr, 1987](https://dl.acm.org/doi/10.1145/30350.30378)  
-This is just a summary; details are in the paper!
+This is summary of [Hierarchical Cache & Bus Architecture for Shared Memory Multiprocessors", Andrew W. Wilson Jr, 1987](https://dl.acm.org/doi/10.1145/30350.30378). I think this paper is first attempt to introduce multi-level caches and hierarchical bus architecture, what we call NUMA (Non-Uniform Memory Access) nowdays.    
+
+This text is a summary; Details are in the paper!
 
 ## What is the problem this paper solves?
 
@@ -33,3 +34,13 @@ One consideration in this architecture is memory allocation algorithm and policy
 - In the simulation results, even in larger systems the multicache coherency algorithm's cost is quite small.
 - Hierarchical cache reduces global bus traffic and decreases access latency.
 - If cache miss and remote cluster (remote node) accesses are so high, it can be a problem in large systems.
+
+## Further Readings
+
+### Computer Interconnection Structures: Taxonomy, Characteristics, and Examples
+
+In higher level view, NUMA is one of ways to connect computers (processors). There are other ways. [This paper](/Computer%20Architecture/Computer%20Interconnection/Computer%20Interconnection%20Structures:%20Taxonomy%2C%20Characteristics%2C%20and%20Examples/summary.md) is a nice taxonomy for ways to connect computers.  
+
+### I haven't read yet but...
+
+As accessing from remote cluster slows down access to memory and increases cost to synchronize between clusters, There will be papers that introduces NUMA-aware memory allocation policies/algorithms.  
