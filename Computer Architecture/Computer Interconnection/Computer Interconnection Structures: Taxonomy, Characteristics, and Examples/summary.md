@@ -20,7 +20,7 @@ But if the cost of adding a PE increases as the size of system increases, it has
 
 ### Connection Flexibility
 
-Connection Flexibility is close concept to Modularity; 
+Connection Flexibility is close concept to Modularity; It means how connecting new Processing Element to a system is flexible. In DXX structures, there's no flexibility when connecting new PEs. But in IXXX structures, there is some ways of adding new PEs. The more way you have, the more flexible it is.
 
 ### Cost of Fault Tolerance
 
@@ -33,6 +33,8 @@ When a system has a nice cost of fault tolerance, it is likely to have way to ru
 For example, in start network, when the central switching element is down, the system may be re-configured to communicate in decentralized way.  
 
 ### Logical Complexity
+
+Logical Complexity is extent to "How much is communication complicated?". In DDX systems, it's quite simple to communicate between computers. but in IDX systems, there is some software cost to implement comunication mechanism.  
 
 ## Criterion For Categorization
 
