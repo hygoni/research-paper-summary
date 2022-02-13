@@ -32,4 +32,10 @@ That means the LRU-K algorithm drops one of buffers that are not accessed at lea
 
 But we need hold buffers for short period, even if they are not accessed K times. That's because a file is accessed more than once (In database example, it reads, calculates, writes data so it is accessed multiple times in a query). That "short period" is called **Correlated Reference Period**.
 
+# Why LRU is better than LFU
+
+There is another approach on this problem, called LFU (Least Frequently Used) algorithm, which drops most infrequently used buffer for replacement. But one limitation of LFU is that it does not "forgets" old accesses. So it does not fit well when access patterns change. As LRU-K just forgets old accesses, it can adapt itself to evolving access patterns. But when K is high, it becomes similar to LFU.  
+
 # Conclusion
+
+LRU-K is better than classical LRU because it can discriminate between frequently / infrequently used buffers, and adapts itself to evolving patterns than LFU.
