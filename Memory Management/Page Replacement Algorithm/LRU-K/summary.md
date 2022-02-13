@@ -20,4 +20,16 @@ Even if B-tree node buffers are more frequently used, classical LRU has no idea 
 
 # LRU-K Algorithm
 
-So how LRU-K algorithm solves this problem? To distinguish between frequently and infrequently used buffers, this algorithm remembers last K accessed time of every buffer. 
+So how LRU-K algorithm solves this problem? To distinguish between frequently and infrequently used buffers, this algorithm remembers last K accessed time of every buffer. accessed times are not hold forever. How long is accessed time is kept? that is **Retained Information Period.**  
+
+# Backward-K distance
+
+Backward-K distance is last Kth accessed time of a buffer. if a buffer is not accessed at least K times, it has infinite distance. The LRU-K algorithm chooses a buffer that has maximum backward-K distance for replacement victim.
+
+That means the LRU-K algorithm drops one of buffers that are not accessed at least K times, or if all of buffers are at least accessed K times, the buffer that has smallest Kth accessed time.  
+
+# Correlated Reference Period
+
+But we need hold buffers for short period, even if they are not accessed K times. That's because a file is accessed more than once (In database example, it reads, calculates, writes data so it is accessed multiple times in a query). That "short period" is called **Correlated Reference Period**.
+
+# Conclusion
