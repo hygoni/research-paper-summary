@@ -10,5 +10,14 @@ It may not be Operating Systems that manage buffers. Some applications bypass Op
 
 # Classical LRU
 
-The classical LRU, which is equal to LRU-1, just drops the Least Recently Used buffer. to implement this, we need to record last accessed time for every buffer. Its overhead is small.  
-But the classical LRU has a problem. What if Least Recently Used buffer is accessed more frequently, than most recently used buffer?
+The classical LRU, which is equal to LRU-1, just drops the Least Recently Used buffer. to implement this, we need to record last accessed time for every buffer. Its overhead is quite small.  
+
+But the classical LRU has a problem. What if Least Recently Used buffer is accessed more frequently, than most recently used buffer?  
+
+The example in this paper is a database. There are two types of buffers. first type is buffer that contains B-tree nodes (access probability is .005), and second type is buffer that contains its data (access probability is .00005).  
+
+Even if B-tree node buffers are more frequently used, classical LRU has no idea of frequency. it just drops a buffer that is least recently used, even if it is most frequently used.  
+
+# LRU-K Algorithm
+
+So how LRU-K algorithm solves this problem? To distinguish between frequently and infrequently used buffers, this algorithm remembers last K accessed time of every buffer. 
