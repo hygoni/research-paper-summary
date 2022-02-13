@@ -28,6 +28,8 @@ Backward-K distance is last Kth access time of a buffer. if a buffer is not acce
 
 That means the LRU-K algorithm drops one of buffers that are not accessed at least K times, or if all of buffers are at least accessed K times, the buffer that has smallest Kth access time.  
 
+Note that access times are just forgotten after Retained Information Period!  
+
 # Correlated Reference Period
 
 But we need hold buffers for short period, even if they are not accessed K times. That's because a file is accessed more than once (In database example, it reads, calculates, writes data so it is accessed multiple times in a query). That "short period" is called **Correlated Reference Period**.
