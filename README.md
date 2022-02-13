@@ -9,6 +9,6 @@ This is a summaries of papers that I read.
 
 # Memory Management
 
-## LRU
+## Page Replacement Algorithm
 - (in reading) [The LRU-K Page Replacement Algorithm For Database Disk Buffering]()
 - (in reading) [2Q: A Low Overhead High Performance Buffer Management]()
