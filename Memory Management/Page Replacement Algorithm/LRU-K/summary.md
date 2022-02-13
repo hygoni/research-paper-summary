@@ -2,6 +2,8 @@
 
 This is summary of [The LRU-K page replacement algorithm for database disk buffering, Elizabeth J. O'Neil, 1992](https://dl.acm.org/doi/10.1145/170036.170081). This paper tries to distinguish between frequent and infrequent buffers when searching for replacement victim buffers.
 
+Note that this is just a summary. proofs and measurements are in the paper!  
+
 # Buffer (Page) Replacement Problem
 
 When program accesses its secondary memory, Operating Systems manages its copy in main memory. that's because access latency of secondary memory; it is usally much slower than main memory. when there are infinite main memory, there is no problem. the problem arises when memory lacks: "Which buffer should be dropped to make new buffer?"   
