@@ -34,7 +34,7 @@ But we need hold buffers for short period, even if they are not accessed K times
 
 # Why LRU is better than LFU
 
-There is another approach on this problem, called LFU (Least Frequently Used) algorithm, which drops most infrequently used buffer for replacement. But one limitation of LFU is that it does not "forgets" old accesses. So it does not fit well when access patterns change. As LRU-K just forgets old accesses, it can adapt itself to evolving access patterns. But when K is high, it becomes similar to LFU.  
+There is another approach on this problem, called LFU (Least Frequently Used) algorithm, which drops most infrequently used buffer for replacement. But one limitation of LFU is that it does not "forget" old accesses. So it does not fit well when access patterns change. As LRU-K just forgets old accesses, it can adapt itself to evolving access patterns. But when K is high, it becomes similar to LFU.  
 
 # Conclusion
 
