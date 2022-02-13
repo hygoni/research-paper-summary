@@ -1,0 +1,14 @@
+# The LRU-K page replacement algorithm for database disk buffering
+
+This is summary of [The LRU-K page replacement algorithm for database disk buffering, Elizabeth J. O'Neil, 1992](https://dl.acm.org/doi/10.1145/170036.170081). This paper tries to distinguish between frequent and infrequent buffers when searching for replacement victim buffers.
+
+# Buffer (Page) Replacement Problem
+
+When program accesses its secondary memory, Operating Systems manages its copy in main memory. that's because access latency of secondary memory; it is usally much slower than main memory. when there are infinite main memory, there is no problem. the problem arises when memory lacks: "Which buffer should be dropped to make new buffer?"   
+
+It may not be Operating Systems that manage buffers. Some applications bypass Operating Systems and manages their own buffers. Anyway, buffer replacement algorithm is important when a workload is I/O intensive; poor algorithm will harm its performance badly.
+
+# Classical LRU
+
+The classical LRU, which is equal to LRU-1, just drops the Least Recently Used buffer. to implement this, we need to record last accessed time for every buffer. Its overhead is small.  
+But the classical LRU has a problem. What if Least Recently Used buffer is accessed more frequently, than most recently used buffer?
