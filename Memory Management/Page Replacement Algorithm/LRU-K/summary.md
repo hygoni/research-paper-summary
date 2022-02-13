@@ -38,4 +38,4 @@ There is another approach on this problem, called LFU (Least Frequently Used) al
 
 # Conclusion
 
-LRU-K is better than classical LRU because it can discriminate between frequently / infrequently used buffers, and adapts itself to evolving patterns than LFU.
+LRU-K is better than classical LRU because it can discriminate between frequently / infrequently used buffers, and adapts itself to evolving patterns unlike LFU.
