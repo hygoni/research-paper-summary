@@ -10,7 +10,7 @@ It may not be Operating Systems that manage buffers. Some applications bypass Op
 
 # Classical LRU
 
-The classical LRU, which is equal to LRU-1, just drops the Least Recently Used buffer. to implement this, we need to record last accessed time for every buffer. Its overhead is quite small.  
+The classical LRU, which is equal to LRU-1, just drops the Least Recently Used buffer. to implement this, we need to record last access time for every buffer. Its overhead is quite small.  
 
 But the classical LRU has a problem. What if Least Recently Used buffer is accessed more frequently, than most recently used buffer?  
 
@@ -20,13 +20,13 @@ Even if B-tree node buffers are more frequently used, classical LRU has no idea 
 
 # LRU-K Algorithm
 
-So how LRU-K algorithm solves this problem? To distinguish between frequently and infrequently used buffers, this algorithm remembers last K accessed time of every buffer. accessed times are not hold forever. How long is accessed time is kept? that is **Retained Information Period.**  
+So how LRU-K algorithm solves this problem? To distinguish between frequently and infrequently used buffers, this algorithm remembers last K accessed time of every buffer. access times are not hold forever. How long are access times kept? that is **Retained Information Period.**  
 
 # Backward-K distance
 
-Backward-K distance is last Kth accessed time of a buffer. if a buffer is not accessed at least K times, it has infinite distance. The LRU-K algorithm chooses a buffer that has maximum backward-K distance for replacement victim.
+Backward-K distance is last Kth access time of a buffer. if a buffer is not accessed at least K times, it has infinite distance. The LRU-K algorithm chooses a buffer that has maximum backward-K distance for replacement victim.
 
-That means the LRU-K algorithm drops one of buffers that are not accessed at least K times, or if all of buffers are at least accessed K times, the buffer that has smallest Kth accessed time.  
+That means the LRU-K algorithm drops one of buffers that are not accessed at least K times, or if all of buffers are at least accessed K times, the buffer that has smallest Kth access time.  
 
 # Correlated Reference Period
 
