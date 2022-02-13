@@ -1,5 +1,5 @@
 # research-paper-summary
-This is a summaries of papers that I read.
+This is summary of papers that I read.
 
 # Computer Architecture
 
