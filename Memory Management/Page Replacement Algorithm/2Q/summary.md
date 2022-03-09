@@ -76,6 +76,10 @@ The performance data on synthetic experiments (based on statistical distribution
 
 There are two parameters in 2Q: Kin and Kout.  
 
-Author of the paper did some experiement and thought about storing whole pages or tags (pointers) of buffer. storing whole pages does not cause page fault when referencing, but it borrows buffers from Am. The author concluded that storing tags in A1out is better approach because it was not sensitive to size of A1. And the paper says Kin should be 25% of total pages and length of Kout should be 50% of the buffer.  
+Author of the paper did some experiement and thought about storing whole pages or tags (pointers) of buffer. storing whole pages does not cause page fault when referencing, but it borrows buffers from Am. The author concluded that storing tags in A1out is better approach because it was not sensitive to size of A1. And the paper says Kin should be 25% of total pages and length of Kout should be 50% of A1in.
 
-## Responsiveness vs Kout
+## Responsiveness
+
+The access pattern of buffers change as time passes. How are LRU, LRU-2, 2Q responsive to changes in locality? The paper says that data shows LRU is most responsive (but this is too responsive.) to change, and LRU-2 sacrifies responsiveness to some degree for better hit rate.  
+
+And responsive of 2Q is determined by Kout. when Kout is low (5% of Kin), it was less responsive than LRU-2. but when increased to 50%, it was very similar to LRU-2.
