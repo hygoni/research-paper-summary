@@ -54,8 +54,9 @@ begin
     add X to the head of Am
   else if (X is in Alin) // do nothing
   else // X is in no queue
-  reclaimfor(X)
-  add X to the head of Alin end if
+    reclaimfor(X)
+    add X to the head of Alin
+  end if
 end
 ```
 ###
