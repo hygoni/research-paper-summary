@@ -13,7 +13,7 @@ So purpose of this paper is to propose algorithm that is as good as LRU-K, but m
 ## What we've learned from LRU-K
 
 # Scan-Resistent
-The strength of LRU-K algorithm is the ability to distinguish buffers that are accessed only once for scanning, and buffers that are frequently accessed (hot). The traditional LRU algorithm fails to distinguish them; If a buffer that is accessed only once is most recently accessed, that cold buffer is in LRU for a long time.  As 2Q is as good as LRU-K, 2Q is scan-resistent too.
+The strength of LRU-K algorithm is the ability to distinguish buffers that are accessed only once for scanning, and buffers that are frequently accessed (hot). The traditional LRU algorithm fails to distinguish them; If a buffer that is accessed only once is most recently accessed, that cold buffer is in LRU for a long time. 2Q is scan-resistent too, like LRU-K.
 
 # Correlated Reference Period
 Even if a buffer is accessed only once, it must be kept in LRU cache for "a short period of time" = Correlated Reference Period. It may be accessed more than once in that short period of time. So we should avoid evicting such buffers.  
@@ -66,8 +66,16 @@ end
 ```
 ![accessing buffer again](https://raw.githubusercontent.com/hygoni/research-paper-summary/main/Memory%20Management/Page%20Replacement%20Algorithm/2Q/4E8DF802-56F1-44D6-A35D-2E29019632C8.jpeg)  
 
-## Evaluation
+# Evaluation
 
 It's a bit weird that the paper shows performance data only in form of hit rate, because hit rate does not show actual time spent. So the data does not explain anything about its overhead. (But yeah, I can't imagine 2Q has more overhead than LRU-K.)  
 
 The performance data on synthetic experiments (based on statistical distribution), and real data (DB / windowing / ...etc) shows that hit rate of 2Q is overally, slightly higher than LRU-K.  
+
+# Parameters of 2Q Algorithm
+
+There are two parameters in 2Q: Kin and Kout.  
+
+Author of the paper did some experiement and thought about storing whole pages or tags (pointers) of buffer. storing whole pages does not cause page fault when referencing, but it borrows buffers from Am. The author concluded that storing tags in A1out is better approach because it was not sensitive to size of A1. And the paper says Kin should be 25% of total pages and length of Kout should be 50% of the buffer.  
+
+## Responsiveness vs Kout
