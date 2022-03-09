@@ -70,6 +70,4 @@ end
 
 It's a bit weird that the paper shows performance data only in form of hit rate, because hit rate does not show actual time spent. So the data does not explain anything about its overhead. (But yeah, I can't imagine 2Q has more overhead than LRU-K.)  
 
-The performance data on synthetic experiments (based on statistical distribution), and real data (DB / windowing / ...etc) shows that hit rate of 2Q is overally higher than LRU-K.  
-
-## Setting Parameters
+The performance data on synthetic experiments (based on statistical distribution), and real data (DB / windowing / ...etc) shows that hit rate of 2Q is overally, slightly higher than LRU-K.  
