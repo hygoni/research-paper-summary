@@ -11,4 +11,4 @@ This is summary of papers that I read.
 
 ## Page Replacement Algorithm
 - [The LRU-K Page Replacement Algorithm For Database Disk Buffering](./Memory%20Management/Page%20Replacement%20Algorithm/LRU-K/summary.md)
-- (in reading) [2Q: A Low Overhead High Performance Buffer Management]()
+- [2Q: A Low Overhead High Performance Buffer Management](./Memory%20Management/Page%20Replacement%20Algorithm/2Q/summary.md)
