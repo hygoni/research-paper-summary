@@ -22,7 +22,8 @@ Even if a buffer is accessed only once, it must be kept in LRU cache for "a shor
 ```bash
 // If there is space, we give it to X.
 // If there is no space, we free a page slot to
-// make room for page X. reclaimfor(page X)
+// make room for page X.
+reclaimfor(page X)
 begin
   if there are free page slots
     then put X into a free page slot
