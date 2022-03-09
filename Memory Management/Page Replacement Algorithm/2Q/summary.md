@@ -20,6 +20,8 @@ Even if a buffer is accessed only once, it must be kept in LRU cache for "a shor
 
 # 2Q Algorithm Pseudocode
 
+The parameters in here are Kin (length of A1in queue) and Kout (length of A1out Queue).
+
 ## Reclaiming for new buffer X
 ```bash
 // If there is space, we give it to X.
@@ -30,16 +32,16 @@ begin
   if there are free page slots
     then put X into a free page slot
   else if(|A1in| > Kin)
-    page out the tail of Alin, call it Y
-    add identifier of Y to the head of Alout
-    if(|A1out| >Kout)
+    page out the tail of A1in, call it Y
+    add identifier of Y to the head of A1out
+    if(|A1out| > Kout)
       remove identifier of Z from
-      the tail of Alout
+      the tail of A1out
     end if
     put X into the reclaimed page slot
   else
     page out the tail of Am, call it Y
-    // do not put it on Alout; it hasn’t been
+    // do not put it on A1out; it hasn’t been
     // accessedfor a while
     put X into the reclaimed page slot
   end if
@@ -53,12 +55,12 @@ end
 begin
   if X is in Am then
     move X to the head of Am
-  else if (X is in Alout) then reclaimfor
+  else if (X is in A1out) then reclaimfor
     add X to the head of Am
-  else if (X is in Alin) // do nothing
+  else if (X is in A1in) // do nothing
   else // X is in no queue
     reclaimfor(X)
-    add X to the head of Alin
+    add X to the head of A1in
   end if
 end
 ```
@@ -69,7 +71,5 @@ end
 It's a bit weird that the paper shows performance data only in form of hit rate, because hit rate does not show actual time spent. So the data does not explain anything about its overhead. (But yeah, I can't imagine 2Q has more overhead than LRU-K.)  
 
 The performance data on synthetic experiments (based on statistical distribution), and real data (DB / windowing / ...etc) shows that hit rate of 2Q is overally higher than LRU-K.  
-
-See details in paper!
 
 ## Setting Parameters
