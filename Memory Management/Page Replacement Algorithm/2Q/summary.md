@@ -1,7 +1,8 @@
 # 2Q: A Low Overhead High Performance Buffer Management Replacement Algorithm
 
-This is summary of [2Q: A Low Overhead High Performance Buffer Management Replacement Algorithm](https://dl.acm.org/doi/10.5555/645920.672996). This paper tries to minimize overhead of LRU-K algorithm, using "2Q" algorithm.
+This is summary of [2Q: A Low Overhead High Performance Buffer Management Replacement Algorithm](https://dl.acm.org/doi/10.5555/645920.672996). This paper tries to minimize overhead of LRU-K algorithm, using "2Q" algorithm.  
 
+This is a summary of the paper; All details are in paper!
 
 # The overhead of LRU-K Algorithm
 
@@ -64,3 +65,11 @@ end
 ![accessing buffer again](https://raw.githubusercontent.com/hygoni/research-paper-summary/main/Memory%20Management/Page%20Replacement%20Algorithm/2Q/4E8DF802-56F1-44D6-A35D-2E29019632C8.jpeg)  
 
 ## Evaluation
+
+It's a bit weird that the paper shows performance data only in form of hit rate, because hit rate does not show actual time spent. So the data does not explain anything about its overhead. (But yeah, I can't imagine 2Q has more overhead than LRU-K.)  
+
+The performance data on synthetic experiments (based on statistical distribution), and real data (DB / windowing / ...etc) shows that hit rate of 2Q is overally higher than LRU-K.  
+
+See details in paper!
+
+## Setting Parameters
