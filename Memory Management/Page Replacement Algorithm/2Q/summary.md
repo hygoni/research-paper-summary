@@ -17,9 +17,9 @@ The strength of LRU-K algorithm is the ability to distinguish buffers that are a
 # Correlated Reference Period
 Even if a buffer is accessed only once, it must be kept in LRU cache for "a short period of time" = Correlated Reference Period. It may be accessed more than once in that short period of time. So we should avoid evicting such buffers.  
 
-## 2Q Algorithm Pseudocode
+# 2Q Algorithm Pseudocode
 
-### Reclaiming for new buffer X
+## Reclaiming for new buffer X
 ```bash
 // If there is space, we give it to X.
 // If there is no space, we free a page slot to
@@ -46,7 +46,7 @@ end
 ```
 ![new buffer](https://raw.githubusercontent.com/hygoni/research-paper-summary/main/Memory%20Management/Page%20Replacement%20Algorithm/2Q/2EFA8C20-546D-491A-82AA-7494F219C662.jpeg)  
 
-### Accessing buffer X
+## Accessing buffer X
 
 ```bash
 begin
