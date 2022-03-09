@@ -2,6 +2,7 @@
 
 This is summary of [2Q: A Low Overhead High Performance Buffer Management Replacement Algorithm](https://dl.acm.org/doi/10.5555/645920.672996). This paper tries to minimize overhead of LRU-K algorithm, using "2Q" algorithm.
 
+
 # The overhead of LRU-K Algorithm
 
 To implement [LRU-K Algorithm](https://github.com/hygoni/research-paper-summary/blob/main/Memory%20Management/Page%20Replacement%20Algorithm/LRU-K/summary.md), there should be K priority queues to manage last Kth access time. (K will be 2 or 3 as the says) that means every access to a buffer must update the queues at complexity of O(n), where n is number of buffer in cache. This paper tries to minimize overhead to constant time by using two queues (2Q).  
@@ -43,6 +44,7 @@ begin
   end if
 end
 ```
+![new buffer](https://raw.githubusercontent.com/hygoni/research-paper-summary/main/Memory%20Management/Page%20Replacement%20Algorithm/2Q/2EFA8C20-546D-491A-82AA-7494F219C662.jpeg)  
 
 ### Accessing buffer X
 
@@ -59,4 +61,6 @@ begin
   end if
 end
 ```
-###
+![accessing buffer again](https://raw.githubusercontent.com/hygoni/research-paper-summary/main/Memory%20Management/Page%20Replacement%20Algorithm/2Q/4E8DF802-56F1-44D6-A35D-2E29019632C8.jpeg)  
+
+## Evaluation
