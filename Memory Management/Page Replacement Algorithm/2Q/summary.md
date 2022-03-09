@@ -6,3 +6,14 @@ This is summary of [2Q: A Low Overhead High Performance Buffer Management Replac
 
 To implement [LRU-K Algorithm](https://github.com/hygoni/research-paper-summary/blob/main/Memory%20Management/Page%20Replacement%20Algorithm/LRU-K/summary.md), there should be K priority queues to manage last Kth access time. (K will be 2 or 3 as the says) that means every access to a buffer must update the queues at complexity of O(n), where n is number of buffer in cache. This paper tries to minimize overhead to constant time by using two queues (2Q).  
 
+So purpose of this paper is to propose algorithm that is as good as LRU-K, but more efficient, and no (less) tuning parameters.  
+
+## What we've learned from LRU-K
+
+# Scan-Resistent
+The strength of LRU-K algorithm is the ability to distinguish buffers that are accessed only once for scanning, and buffers that are frequently accessed (hot). The traditional LRU algorithm fails to distinguish them; If a buffer that is accessed only once is most recently accessed, that cold buffer is in LRU for a long time.  As 2Q is as good as LRU-K, 2Q is scan-resistent too.
+
+# Correlated Reference Period
+Even if a buffer is accessed only once, it must be kept in LRU cache for "a short period of time" = Correlated Reference Period. It may be accessed more than once in that short period of time. So we should avoid evicting such buffers.  
+
+## 2Q Algorithm Description
