@@ -19,4 +19,18 @@ The paper demonstrates this approach can save 4-5% of total cost for Warehouse-S
 
 # Characteristics of Warehouse-Scale Computers
 
-WSCs should provide good performance to some degree. If far memory hurts its performance too much, we need more hardware to fill the gaps. Then 
+1) WSCs should provide good performance to some degree. If far memory hurts its performance too much, we need more hardware to fill the gaps.  
+2) Various types of applications makes it impractical to tune parameters manually  
+3) As memory behavior changes dynamically it should be able to react to the change.  
+
+This paper solves 2) 3) by using ML-based tuner. and demonstrates it doesn't hurt too badly.  
+
+# Design Overview
+
+## kstaled
+
+## kreclaimd
+
+## node agent
+
+## ML-based autotuner
