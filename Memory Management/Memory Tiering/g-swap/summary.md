@@ -27,10 +27,21 @@ This paper solves 2) 3) by using ML-based tuner. and demonstrates it doesn't hur
 
 # Design Overview
 
+![Design](https://raw.githubusercontent.com/hygoni/research-paper-summary/main/Memory%20Management/Memory%20Tiering/g-swap/CFE5AAB2-DFFB-455E-9478-0E0931AF42AB.jpeg)
+
 ## kstaled
+
+**kstaled** periodically scans PTEs and calculate their age using accessed bit. If a page is incompressible (when compressed size is too big), it does not track its age until it becomes dirty page.  
 
 ## kreclaimd
 
+**kreclaimd** compresses pages colder than threshold.  
+
 ## node agent
 
+**node agent** sets cold threshold of kreclaimd.
+
 ## ML-based autotuner
+
+
+# Evaluation
